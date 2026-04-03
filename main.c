@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "deque.h"
 
@@ -43,7 +44,7 @@ int main() {
             }
             res = copy_deque(deques, id, &next_id);
             if (res >= 0)
-                printf("A copy of the queue has been created %d with number %d\n", id, res);
+                printf("A copy of the queue with number %d has been created \n", id);
             else if (res == -1)
                 printf("Error: original queue %d don't exist\n", id);
             else
@@ -71,7 +72,7 @@ int main() {
                 continue;
             }
             if (deque_push_front(deques[current_id], data) == 0)
-                printf("Pushed %.2f in the queue start %d\n", data, current_id);
+                printf("Pushed %.2f in the queue %d start \n", data, current_id);
             else
                 printf("Push error\n");
         }
@@ -85,7 +86,7 @@ int main() {
                 continue;
             }
             if (deque_push_back(deques[current_id], data) == 0)
-                printf("Pushed %.2f in the queue end %d\n", data, current_id);
+                printf("Pushed %.2f in the queue %d end \n", data, current_id);
             else
                 printf("Push error\n");
         }
@@ -95,7 +96,7 @@ int main() {
                 continue;
             }
             if (deque_pop_front(deques[current_id], &data) == 0)
-                printf("Poped %.2f from the queue start %d\n", data, current_id);
+                printf("Poped %.2f from the queue %d start \n", data, current_id);
             else
                 printf("Error: queue is empty\n");
         }
@@ -105,7 +106,7 @@ int main() {
                 continue;
             }
             if (deque_pop_back(deques[current_id], &data) == 0)
-                printf("Poped %.2f from the queue end %d\n", data, current_id);
+                printf("Poped %.2f from the queue %d end \n", data, current_id);
             else
                 printf("Eror: queue is empty\n");
         }
